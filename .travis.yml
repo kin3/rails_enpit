@@ -1,16 +1,16 @@
-language: ruby
-rvm:
-- 2.2.2
-deploy:
-  provider: heroku
-  api_key:
-    secure: 3L+kNizaFlIq53aR/8th7cYx893BafaFgjTjb11p22RTY6foFr0Uh/8jCmZv7vaQNETWT5jdYnYRsKC1YBKRop7IyTGU5U40e56T3JhyDIkoPlLJZe2ucgoTblWDlV39OVOCZTLc99EvLF7l/lOTLXVn2vCNiMzF8v+qL0hDumDu8Ssdb6COe+dPKsRQJ+lfXCmAPxv1SP8znM4+Y5+750fORULw56ZrwthWNWmGEZn7OEQ2+8QikPxbplyx5SYg6xJoRZ0F8Ga/EUSNJp7G59JxZEjudWToMtSSHOf5ZiFcYmOWL7Io6oOKLJt8T0bkFMNo4d7a0LCbU3mzmFvJA/sLLQryRxJ30+V5KCJ5Uo1aYDxCsTYqShO1AtepR3RQN6nTDLT2r//rP/YjjWC+Crihp1whmuAsCQ3YxdgbH7nfWsSfcwkOiJaGqNcR4F4w/ovGLzmDBVMO6b4UOvm0PSLhAA3tK0isb/G0SisB3bNNZHqZqYRpQBywuOxW0tPdTvsvomH8M2IjC7FigL3xwXL4FgU0n/ULPqA0hnJ1k0f9aSDhySHHwOwy/1ddS6c9n7LOoMczLGCQfnTcqWowPIhalA8rr7M9osZTW8dm3ibYg5fW0kHrRZI1vZ9QIf559Z157Oj4GIrYClOC+9VYVqLijkL/2EjjIHNuG1Id+C0=
-  app: fathomless-eyrie-6078
-  on:
-    repo: kin3/rails_enpit
-    branch: books
-addons:
-  postgresql: "9.3"
-before_script:
-  - psql -c 'create database travis_ci_test;' -U postgres
-  - cp config/database.yml.travis config/database.yml
+language: ruby 
+rvm: 
+- 2.2.2 
+deploy: 
+  provider: heroku 
+  api_key: 
+    secure: GcXtfKyC/nnx0IsiUNDJ1VziBOx2OLHLRmPEVr6mXBvjMgnsjeAvbn4BUXJgVGp6v9ObApdhYtVsHQIkiZlUkaN53z+oC0ADkpUBya2120/lhSpCpHyivBlEq7tihhPAFpmq2TJBlnkAXR9OZMmbu/f7Cv2DoRVd37Oi3dzTQSUh2LkUE53/p1oUF18zo4fsYBiTLxvqGx27n5MW6cCBuBSiPIxS/gcP7fvF1yoqm5JgmCt+rMP6DjxCXKbADubtBwYBxQK8wZYMmg96np1i4vONtIjERB6dYDVtOECjSmEM61zMSkO40n10iZjrKhQIJg9Jaamoo4aGy6O1gQLViuq7Wug7Nh6yDBMEzmIfix+vjAxKc94CPBagXEubldKboOc2l0ELn3giHjJQjeHU0HWq4x/W6dhtmhRNevHz+gnhoLqX+HpC7k/qzyGUpAEuGt4nyYSt9JY/veLZDtqngj5mWtOAPeb32s+jctKDedgPRSyrbEOC5XJ0eE26tlltQbCLEuMRngvUfv8/jiAL4SlqiEzyXCRE61QIuu/FMqBvnaKKvQDypQ3pCixXCYBerQxQJ8Cuu0a7gI/e3whUa/lYDCZbjjclZOyPfhth0gZYSE6TQ7oOZMxSEWXa8ZmXgf8Vj0cuehM2hVJTbgAeggkE8EsmQl8ObY4RAkfn9ow= 
+  app: stark-temple-7909 
+  on: 
+     repo: ychubachi/rails_enpit 
+     branch: master 
+ addons: 
+   postgresql: "9.3" 
+ before_script: 
+   - psql -c 'create database travis_ci_test;' -U postgres 
+   - cp config/database.yml.travis config/database.yml 
