@@ -1,0 +1,14 @@
+language: ruby
+rvm:
+- 2.0.0
+- 1.9.3
+- jruby-19mode
+- rbx-2
+deploy:
+  provider: heroku
+  api_key:
+    secure: 3L+kNizaFlIq53aR/8th7cYx893BafaFgjTjb11p22RTY6foFr0Uh/8jCmZv7vaQNETWT5jdYnYRsKC1YBKRop7IyTGU5U40e56T3JhyDIkoPlLJZe2ucgoTblWDlV39OVOCZTLc99EvLF7l/lOTLXVn2vCNiMzF8v+qL0hDumDu8Ssdb6COe+dPKsRQJ+lfXCmAPxv1SP8znM4+Y5+750fORULw56ZrwthWNWmGEZn7OEQ2+8QikPxbplyx5SYg6xJoRZ0F8Ga/EUSNJp7G59JxZEjudWToMtSSHOf5ZiFcYmOWL7Io6oOKLJt8T0bkFMNo4d7a0LCbU3mzmFvJA/sLLQryRxJ30+V5KCJ5Uo1aYDxCsTYqShO1AtepR3RQN6nTDLT2r//rP/YjjWC+Crihp1whmuAsCQ3YxdgbH7nfWsSfcwkOiJaGqNcR4F4w/ovGLzmDBVMO6b4UOvm0PSLhAA3tK0isb/G0SisB3bNNZHqZqYRpQBywuOxW0tPdTvsvomH8M2IjC7FigL3xwXL4FgU0n/ULPqA0hnJ1k0f9aSDhySHHwOwy/1ddS6c9n7LOoMczLGCQfnTcqWowPIhalA8rr7M9osZTW8dm3ibYg5fW0kHrRZI1vZ9QIf559Z157Oj4GIrYClOC+9VYVqLijkL/2EjjIHNuG1Id+C0=
+  app: fathomless-eyrie-6078
+  on:
+    repo: kin3/rails_enpit
+    branch: books
