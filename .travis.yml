@@ -1,0 +1,16 @@
+language: ruby 
+rvm: 
+- 2.2.2 
+deploy: 
+  provider: heroku 
+  api_key: 
+    secure: GcXtfKyC/nnx0IsiUNDJ1VziBOx2OLHLRmPEVr6mXBvjMgnsjeAvbn4BUXJgVGp6v9ObApdhYtVsHQIkiZlUkaN53z+oC0ADkpUBya2120/lhSpCpHyivBlEq7tihhPAFpmq2TJBlnkAXR9OZMmbu/f7Cv2DoRVd37Oi3dzTQSUh2LkUE53/p1oUF18zo4fsYBiTLxvqGx27n5MW6cCBuBSiPIxS/gcP7fvF1yoqm5JgmCt+rMP6DjxCXKbADubtBwYBxQK8wZYMmg96np1i4vONtIjERB6dYDVtOECjSmEM61zMSkO40n10iZjrKhQIJg9Jaamoo4aGy6O1gQLViuq7Wug7Nh6yDBMEzmIfix+vjAxKc94CPBagXEubldKboOc2l0ELn3giHjJQjeHU0HWq4x/W6dhtmhRNevHz+gnhoLqX+HpC7k/qzyGUpAEuGt4nyYSt9JY/veLZDtqngj5mWtOAPeb32s+jctKDedgPRSyrbEOC5XJ0eE26tlltQbCLEuMRngvUfv8/jiAL4SlqiEzyXCRE61QIuu/FMqBvnaKKvQDypQ3pCixXCYBerQxQJ8Cuu0a7gI/e3whUa/lYDCZbjjclZOyPfhth0gZYSE6TQ7oOZMxSEWXa8ZmXgf8Vj0cuehM2hVJTbgAeggkE8EsmQl8ObY4RAkfn9ow= 
+  app: stark-temple-7909 
+  on: 
+     repo: ychubachi/rails_enpit 
+     branch: master 
+addons: 
+  postgresql: "9.3" 
+before_script: 
+  - psql -c 'create database travis_ci_test;' -U postgres 
+  - cp config/database.yml.travis config/database.yml 
